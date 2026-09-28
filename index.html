@@ -7,88 +7,131 @@
 </head>
 
 <body>
-    <a href="#conteudo">Pular para o conteúdo</a>
+
+    <a class="pular" href="#conteudo">Pular para o conteúdo</a>
 
     <header class="cabecalho-site">
-    <h1>AgroFeira</h1>
+        <h1>AgroFeira</h1>
 
-    <nav aria-label="Principal">
-        <ul class="menu">
-            <li><a href="index.html" aria-current="page">Início</a></li>
-            <li><a href="safra.html">Safra</a></li>
-            <li><a href="cadastro-produtor.html">Cadastro de produtor</a></li>
-            <li><a href="sobre.html">Sobre</a></li>
-        </ul>
-    </nav>
-</header>
-
-        <nav>
-            <ul>
-                <li><a href="#sobre">Sobre a feira</a></li>
-                <li><a href="#produtos">Produtos</a></li>
+        <nav aria-label="Principal">
+            <ul class="menu">
+                <li><a href="index.html" aria-current="page">Início</a></li>
+                <li><a href="safra.html">Safra</a></li>
+                <li><a href="cadastro-produtor.html">Cadastro de produtor</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
             </ul>
         </nav>
     </header>
 
     <main id="conteudo">
-        <p>
-    <a href="#inicio">Sobre a feira</a>
-</p>
 
-<p>
-    <a href="#produtos">Produtos</a>
-</p>
+        <p>
+            <a href="#inicio">Sobre a feira</a>
+        </p>
+
+        <p>
+            <a href="#produtos">Produtos</a>
+        </p>
 
         <section>
             <h2 id="inicio">AgroFeira de Paragominas</h2>
+
             <p>
-             A AgroFeira de Paragominas reúne produtores locais e oferece
-             <strong>produtos frescos para a população</strong>, valorizando a agricultura
-             e a produção da região.
+                A AgroFeira de Paragominas reúne produtores locais e oferece
+                <strong>produtos frescos para a população</strong>, valorizando a agricultura
+                e a produção da região.
             </p>
-            <figure>
-                <form action="" method="get">
-    <label for="produto">Procurar produto</label>
-    <input type="search" id="produto" name="produto">
-    <button type="submit">
-        <img src="lupa.png" alt="Buscar">
-    </button>
-</form>
-    <picture>
-        <source media="(min-width: 800px)" srcset="feira-1280.jpg">
-        <img src="feira-330.jpg" alt="Feira com produtos da agricultura local" width="330" height="247">
-    </picture>
-    <figcaption>
-        Foto: Rayelle da Silva Freitas, CC BY-SA 4.0, via Wikimedia Commons.
-    </figcaption>
-</figure>
+
+            <figure class="figura-destaque">
+                <picture>
+                    <source media="(min-width: 800px)" srcset="feira-1280.jpg">
+
+                    <img
+                        src="feira-330.jpg"
+                        alt="Feira com produtos da agricultura local"
+                        width="330"
+                        height="247"
+                    >
+                </picture>
+
+                <figcaption>
+                    Foto: Rayelle da Silva Freitas, CC BY-SA 4.0, via Wikimedia Commons.
+                </figcaption>
+            </figure>
+        </section>
+
+        <section class="busca">
+            <h2>Procurar produto</h2>
+
+            <form action="" method="get">
+                <label for="produto">Procurar produto</label>
+
+                <input
+                    type="search"
+                    id="produto"
+                    name="produto"
+                >
+
+                <button type="submit">
+                    <img src="lupa.png" alt="Buscar">
+                </button>
+            </form>
         </section>
 
         <section>
-            <h2 id="produtos">Produtos</h2>
+            <h2 id="produtos">Produtos disponíveis</h2>
 
-            <ul>
-                <li>Mandioca — saca de 60 kg</li>
-                <li>Banana-prata — cacho</li>
-                <li>Açaí — rasa</li>
-                <li>Pimenta-do-reino — quilo</li>
-                <li>Cupuaçu — quilo</li>
-                <li>Alface — maço</li>
+            <ul class="lista-produtos">
+
+                <li class="cartao-produto">
+                    Mandioca — saca de 60 kg
+                </li>
+
+                <li class="cartao-produto">
+                    Banana-prata — cacho
+                </li>
+
+                <li class="cartao-produto">
+                    Açaí — rasa
+                </li>
+
+                <li class="cartao-produto">
+                    Pimenta-do-reino — quilo
+                </li>
+
+                <li class="cartao-produto">
+                    Cupuaçu — quilo
+                </li>
+
+                <li class="cartao-produto">
+                    Alface — maço
+                </li>
+
             </ul>
+
+            <p class="aviso">
+                <strong>Os preços mudam toda semana.</strong>
+            </p>
         </section>
-        <p>
-    Os preços e a disponibilidade dos produtos podem variar conforme a safra e a oferta dos produtores.
-        </p>
+
+        <aside>
+            <h2>Informações da feira</h2>
+
+            <p>
+                Endereço: Parque de Exposições de Paragominas - PA
+            </p>
+
+            <p>
+                Horário: aos domingos, das 6h às 12h.
+            </p>
+        </aside>
 
     </main>
-    <aside>
-    <h2>Informações da feira</h2>
-    <p>Endereço: Parque de Exposições de Paragominas - PA</p>
-    <p>Horário: aos domingos, das 6h às 12h.</p>
-</aside>
 
     <footer class="rodape-site">
-        <p>AgroFeira de Paragominas - valorizando os produtores locais.</p>
+        <p>
+            AgroFeira de Paragominas - valorizando os produtores locais.
+        </p>
     </footer>
 
 </body>
