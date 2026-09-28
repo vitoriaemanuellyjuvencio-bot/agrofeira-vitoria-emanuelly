@@ -3,13 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AgroFeira</title>
+    <title>AgroFeira - Início</title>
 </head>
 
 <body>
+    <a href="#conteudo">Pular para o conteúdo</a>
 
-    <header>
-        <h1>AgroFeira de Paragominas</h1>
+    <header class="cabecalho-site">
+    <h1>AgroFeira</h1>
+
+    <nav aria-label="Principal">
+        <ul class="menu">
+            <li><a href="index.html" aria-current="page">Início</a></li>
+            <li><a href="safra.html">Safra</a></li>
+            <li><a href="cadastro-produtor.html">Cadastro de produtor</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+        </ul>
+    </nav>
+</header>
 
         <nav>
             <ul>
@@ -19,30 +30,64 @@
         </nav>
     </header>
 
-    <main>
+    <main id="conteudo">
+        <p>
+    <a href="#inicio">Sobre a feira</a>
+</p>
+
+<p>
+    <a href="#produtos">Produtos</a>
+</p>
 
         <section>
-            <h2 id="sobre">Sobre a feira</h2>
+            <h2 id="inicio">AgroFeira de Paragominas</h2>
             <p>
-                A AgroFeira de Paragominas reúne produtores locais e oferece
-                produtos frescos para a população, valorizando a agricultura
-                e a produção da região.
+             A AgroFeira de Paragominas reúne produtores locais e oferece
+             <strong>produtos frescos para a população</strong>, valorizando a agricultura
+             e a produção da região.
             </p>
+            <figure>
+                <form action="" method="get">
+    <label for="produto">Procurar produto</label>
+    <input type="search" id="produto" name="produto">
+    <button type="submit">
+        <img src="lupa.png" alt="Buscar">
+    </button>
+</form>
+    <picture>
+        <source media="(min-width: 800px)" srcset="feira-1280.jpg">
+        <img src="feira-330.jpg" alt="Feira com produtos da agricultura local" width="330" height="247">
+    </picture>
+    <figcaption>
+        Foto: Rayelle da Silva Freitas, CC BY-SA 4.0, via Wikimedia Commons.
+    </figcaption>
+</figure>
         </section>
 
         <section>
             <h2 id="produtos">Produtos</h2>
 
             <ul>
-                <li>Farinha de mandioca - vendida por quilograma</li>
-                <li>Banana - vendida por dúzia</li>
-                <li>Mel - vendido por litro</li>
+                <li>Mandioca — saca de 60 kg</li>
+                <li>Banana-prata — cacho</li>
+                <li>Açaí — rasa</li>
+                <li>Pimenta-do-reino — quilo</li>
+                <li>Cupuaçu — quilo</li>
+                <li>Alface — maço</li>
             </ul>
         </section>
+        <p>
+    Os preços e a disponibilidade dos produtos podem variar conforme a safra e a oferta dos produtores.
+        </p>
 
     </main>
+    <aside>
+    <h2>Informações da feira</h2>
+    <p>Endereço: Parque de Exposições de Paragominas - PA</p>
+    <p>Horário: aos domingos, das 6h às 12h.</p>
+</aside>
 
-    <footer>
+    <footer class="rodape-site">
         <p>AgroFeira de Paragominas - valorizando os produtores locais.</p>
     </footer>
 
