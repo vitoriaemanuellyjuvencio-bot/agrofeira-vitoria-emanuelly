@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroFeira - Cadastro de produtor</title>
+</head>
+
+<body>
+
+<a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+<header class="cabecalho-site">
+    <h1>AgroFeira</h1>
+
+    <nav aria-label="Principal">
+        <ul class="menu">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="safra.html">Safra</a></li>
+            <li><a href="cadastro-produtor.html" aria-current="page">Cadastro de produtor</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main id="conteudo">
+
+    <form class="formulario-cadastro">
+
+        <fieldset>
+            <legend>Quem é você</legend>
+
+            <label for="nome">Nome completo</label>
+            <input type="text" id="nome" name="nome"
+                   autocomplete="name" required>
+
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email"
+                   autocomplete="email" required>
+
+            <label for="telefone">Telefone</label>
+            <input type="tel" id="telefone" name="telefone"
+                   autocomplete="tel">
+
+            <label for="caf">Número do CAF</label>
+            <input type="text" id="caf" name="caf">
+
+            <label for="cep">CEP da propriedade</label>
+            <input type="text" id="cep" name="cep"
+                   inputmode="numeric"
+                   pattern="[0-9]{5}-?[0-9]{3}">
+        </fieldset>
+
+        <fieldset>
+            <legend>O que você vende</legend>
+
+            <label for="produto">Produto principal</label>
+            <select id="produto" name="produto" required>
+                <option value="">Escolha um produto</option>
+                <option value="mandioca">Mandioca</option>
+                <option value="banana-prata">Banana-prata</option>
+                <option value="acai">Açaí</option>
+                <option value="pimenta-do-reino">Pimenta-do-reino</option>
+                <option value="cupuacu">Cupuaçu</option>
+                <option value="alface">Alface</option>
+            </select>
+
+            <label for="quantidade">Quantidade por semana</label>
+            <input type="number" id="quantidade" name="quantidade"
+                   min="1" max="500" step="1" required>
+
+            <label for="data-entrega">Começa a entregar em</label>
+            <input type="date" id="data-entrega" name="data-entrega">
+
+            <p>Como entrega</p>
+
+            <label>
+                <input type="radio" name="entrega" value="feira">
+                Leva à feira
+            </label>
+
+            <label>
+                <input type="radio" name="entrega" value="retira">
+                A feira retira na propriedade
+            </label>
+
+            <label for="observacao">Observação</label>
+            <textarea id="observacao" name="observacao"></textarea>
+
+            <label>
+                <input type="checkbox" name="aceite" required>
+                Aceito as regras da AgroFeira
+            </label>
+
+            <button type="submit">Enviar</button>
+        </fieldset>
+
+        <p id="status" aria-live="polite"></p>
+
+    </form>
+
+</main>
+
+<footer class="rodape-site">
+    <p>AgroFeira de Paragominas - valorizando os produtores locais.</p>
+</footer>
+
+</body>
+</html>
