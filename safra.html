@@ -8,113 +8,119 @@
 
 <body>
 
-<a href="#conteudo">Pular para o conteúdo</a>
+    <a class="pular" href="#conteudo">Pular para o conteúdo</a>
 
-<header class="cabecalho-site">
-    <h1>AgroFeira</h1>
+    <header class="cabecalho-site">
+        <h1>AgroFeira</h1>
 
-    <nav aria-label="Principal">
-        <ul class="menu">
-            <li><a href="index.html">Início</a></li>
-            <li><a href="safra.html" aria-current="page">Safra</a></li>
-            <li><a href="cadastro-produtor.html">Cadastro de produtor</a></li>
-            <li><a href="sobre.html">Sobre</a></li>
-        </ul>
-    </nav>
-</header>
+        <nav aria-label="Principal">
+            <ul class="menu">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="safra.html" aria-current="page">Safra</a></li>
+                <li><a href="cadastro-produtor.html">Cadastro de produtor</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<main id="conteudo">
+    <main id="conteudo">
 
-    <h2>Safra dos produtos</h2>
-    <p>
-    A indicação de safra mostra a disponibilidade dos produtos ao longo do ano.
-    “Cheio” significa que o produto está em período de maior disponibilidade,
-    “meia” indica disponibilidade intermediária e “vazio” significa que o produto
-    está em período de menor disponibilidade.
-</p>
+        <section>
+            <h2>Safra dos produtos</h2>
 
-</main>
-<table>
-    <caption>Disponibilidade dos produtos por mês</caption>
+            <p>
+                A indicação de safra mostra a disponibilidade dos produtos ao longo do ano.
+                “Cheio” significa que o produto está em período de maior disponibilidade,
+                “meia” indica disponibilidade intermediária e “vazio” significa que o produto
+                está em período de menor disponibilidade.
+            </p>
 
-    <thead>
-        <tr>
-            <th scope="col">Produto</th>
-            <th scope="col">Janeiro</th>
-            <th scope="col">Fevereiro</th>
-            <th scope="col">Março</th>
-            <th scope="col">Abril</th>
-            <th scope="col">Maio</th>
-            <th scope="col">Junho</th>
-        </tr>
-    </thead>
+            <table class="tabela-safra">
+                <caption>Disponibilidade dos produtos por mês</caption>
 
-    <tbody>
-        <tr>
-            <th scope="row">Mandioca</th>
-            <td>cheio</td>
-            <td>cheio</td>
-            <td>meia</td>
-            <td>meia</td>
-            <td>vazio</td>
-            <td>vazio</td>
-        </tr>
+                <thead>
+                    <tr>
+                        <th scope="col">Produto</th>
+                        <th scope="col">Jan</th>
+                        <th scope="col">Fev</th>
+                        <th scope="col">Mar</th>
+                        <th scope="col">Abr</th>
+                        <th scope="col">Mai</th>
+                        <th scope="col">Jun</th>
+                    </tr>
+                </thead>
 
-        <tr>
-            <th scope="row">Banana-prata</th>
-            <td>cheio</td>
-            <td>cheio</td>
-            <td>cheio</td>
-            <td>meia</td>
-            <td>meia</td>
-            <td>vazio</td>
-        </tr>
+                <tbody>
+                    <tr>
+                        <th scope="row">Mandioca</th>
+                        <td>Cheio</td>
+                        <td>Cheio</td>
+                        <td>Cheio</td>
+                        <td>Meia</td>
+                        <td>Meia</td>
+                        <td>Vazio</td>
+                    </tr>
 
-        <tr>
-            <th scope="row">Açaí</th>
-            <td>vazio</td>
-            <td>vazio</td>
-            <td>meia</td>
-            <td>meia</td>
-            <td>cheio</td>
-            <td>cheio</td>
-        </tr>
+                    <tr>
+                        <th scope="row">Banana-prata</th>
+                        <td>Cheio</td>
+                        <td>Cheio</td>
+                        <td>Meia</td>
+                        <td>Meia</td>
+                        <td>Cheio</td>
+                        <td>Cheio</td>
+                    </tr>
 
-        <tr>
-            <th scope="row">Pimenta-do-reino</th>
-            <td>vazio</td>
-            <td>meia</td>
-            <td>meia</td>
-            <td>cheio</td>
-            <td>cheio</td>
-            <td>meia</td>
-        </tr>
+                    <tr>
+                        <th scope="row">Açaí</th>
+                        <td>Vazio</td>
+                        <td>Vazio</td>
+                        <td>Meia</td>
+                        <td>Cheio</td>
+                        <td>Cheio</td>
+                        <td>Cheio</td>
+                    </tr>
 
-        <tr>
-            <th scope="row">Cupuaçu</th>
-            <td>vazio</td>
-            <td>vazio</td>
-            <td>meia</td>
-            <td>cheio</td>
-            <td>cheio</td>
-            <td>meia</td>
-        </tr>
+                    <tr>
+                        <th scope="row">Pimenta-do-reino</th>
+                        <td>Vazio</td>
+                        <td>Vazio</td>
+                        <td>Meia</td>
+                        <td>Meia</td>
+                        <td>Cheio</td>
+                        <td>Cheio</td>
+                    </tr>
 
-        <tr>
-            <th scope="row">Alface</th>
-            <td>cheio</td>
-            <td>cheio</td>
-            <td>cheio</td>
-            <td>cheio</td>
-            <td>meia</td>
-            <td>meia</td>
-        </tr>
-    </tbody>
-<table class="tabela-safra">
+                    <tr>
+                        <th scope="row">Cupuaçu</th>
+                        <td>Cheio</td>
+                        <td>Cheio</td>
+                        <td>Meia</td>
+                        <td>Vazio</td>
+                        <td>Vazio</td>
+                        <td>Meia</td>
+                    </tr>
 
-<footer class="rodape-site">
-    <p>AgroFeira de Paragominas - valorizando os produtores locais.</p>
-</footer>
+                    <tr>
+                        <th scope="row">Alface</th>
+                        <td>Cheio</td>
+                        <td>Cheio</td>
+                        <td>Cheio</td>
+                        <td>Cheio</td>
+                        <td>Meia</td>
+                        <td>Meia</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+    </main>
+
+    <footer class="rodape-site">
+        <p>
+            AgroFeira de Paragominas - valorizando os produtores locais.
+        </p>
+    </footer>
 
 </body>
 </html>
