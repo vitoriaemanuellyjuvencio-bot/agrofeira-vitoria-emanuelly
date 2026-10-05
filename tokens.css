@@ -1,0 +1,33 @@
+:root {
+    /* Cores */
+    --cor-fundo: ;
+    --cor-superficie: ;
+    --cor-texto: ;
+    --cor-texto-suave: ;
+    --cor-marca: ;
+    --cor-sobre-marca: ;
+    --cor-borda: ;
+
+    /* Fontes */
+    --fonte-texto: system-ui, sans-serif;
+    --fonte-titulo: "IBM Plex Serif", serif;
+
+    /* Escala tipográfica */
+    /* Multiplicador da escala: 1.25 */
+    --tamanho-texto: 1rem;
+    --tamanho-h3: 1.25rem;
+    --tamanho-h2: 1.563rem;
+    --tamanho-h1: 1.953rem;
+
+    /* Espaçamentos */
+    --espaco-1: 0.5rem;
+    --espaco-2: 1rem;
+    --espaco-3: 1.5rem;
+    --espaco-4: 2rem;
+
+    /* Bordas */
+    --raio: 0.5rem;
+
+    /* Sombra */
+    --sombra: 0 2px 8px rgba(0, 0, 0, 0.1);
+}

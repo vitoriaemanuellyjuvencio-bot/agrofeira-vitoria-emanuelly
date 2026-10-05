@@ -1,0 +1,34 @@
+/* Caso 1 */
+/* Previsão: a regra .aviso strong vence porque possui uma classe
+e um elemento, enquanto strong possui apenas um elemento. */
+.aviso strong {
+    color: var(--cor-marca);
+}
+
+strong {
+    color: var(--cor-texto-suave);
+}
+
+
+/* Caso 2 */
+/* Previsão: a regra .busca label vence porque possui uma classe
+e um elemento, enquanto label[for] possui um elemento e um atributo. */
+.busca label {
+    color: var(--cor-marca);
+}
+
+label[for] {
+    color: var(--cor-texto-suave);
+}
+
+
+/* Caso 3 */
+/* Previsão: a regra footer p vence porque possui dois elementos,
+enquanto .rodape-site possui apenas uma classe. */
+.rodape-site {
+    color: var(--cor-marca);
+}
+
+footer p {
+    color: var(--cor-texto);
+}
