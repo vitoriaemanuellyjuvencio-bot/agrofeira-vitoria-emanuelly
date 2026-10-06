@@ -2,10 +2,10 @@
     /* Cores */
     --cor-fundo: #F3F0E8;
     --cor-superficie: #FFFFFF;
-    --cor-texto: #1F2933;
-    --cor-texto-suave: #52606D;
+    --cor-texto: #1F2933; /* 12,96:1 sobre --cor-fundo — AAA; 14,76:1 sobre --cor-superficie — AAA */
+    --cor-texto-suave: #52606D; /* 5,67:1 sobre --cor-fundo — AA; 6,46:1 sobre --cor-superficie — AA */
     --cor-marca: #7A3E00;
-    --cor-sobre-marca: #FFFFFF;
+    --cor-sobre-marca: #FFFFFF; /* 8,34:1 sobre --cor-marca — AAA */
     --cor-borda: #B8B8B8;
 
     /* Fontes */

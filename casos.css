@@ -1,6 +1,5 @@
 /* Caso 1 */
-/* Previsão: a regra .aviso strong vence porque possui uma classe
-e um elemento, enquanto strong possui apenas um elemento. */
+/* Previsão: .aviso strong vence, pois tem especificidade maior que strong. */
 .aviso strong {
     color: var(--cor-marca);
 }
@@ -9,10 +8,11 @@ strong {
     color: var(--cor-texto-suave);
 }
 
+/* Conferido: .aviso strong venceu; a regra strong ficou riscada no DevTools. */
+
 
 /* Caso 2 */
-/* Previsão: a regra .busca label vence porque possui uma classe
-e um elemento, enquanto label[for] possui um elemento e um atributo. */
+/* Previsão: label[for] vence, pois tem especificidade maior que .busca label. */
 .busca label {
     color: var(--cor-marca);
 }
@@ -21,10 +21,11 @@ label[for] {
     color: var(--cor-texto-suave);
 }
 
+/* Conferido: label[for] venceu; a regra .busca label ficou riscada no DevTools. */
+
 
 /* Caso 3 */
-/* Previsão: a regra footer p vence porque possui dois elementos,
-enquanto .rodape-site possui apenas uma classe. */
+/* Previsão: footer p vence, pois tem especificidade maior que .rodape-site. */
 .rodape-site {
     color: var(--cor-marca);
 }
@@ -32,3 +33,5 @@ enquanto .rodape-site possui apenas uma classe. */
 footer p {
     color: var(--cor-texto);
 }
+
+/* Conferido: footer p venceu; a regra .rodape-site ficou riscada no DevTools. */
