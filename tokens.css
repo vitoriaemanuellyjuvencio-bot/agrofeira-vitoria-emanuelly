@@ -1,12 +1,12 @@
 :root {
     /* Cores */
-    --cor-fundo: ;
-    --cor-superficie: ;
-    --cor-texto: ;
-    --cor-texto-suave: ;
-    --cor-marca: ;
-    --cor-sobre-marca: ;
-    --cor-borda: ;
+    --cor-fundo: #F3F0E8;
+    --cor-superficie: #FFFFFF;
+    --cor-texto: #1F2933;
+    --cor-texto-suave: #52606D;
+    --cor-marca: #7A3E00;
+    --cor-sobre-marca: #FFFFFF;
+    --cor-borda: #B8B8B8;
 
     /* Fontes */
     --fonte-texto: system-ui, sans-serif;
