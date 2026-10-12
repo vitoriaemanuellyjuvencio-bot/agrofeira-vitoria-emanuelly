@@ -209,3 +209,57 @@ blockquote {
     margin-bottom: var(--espaco-2);
     max-width: 65ch;
 }
+
+/* Formulário responsivo */
+.formulario-cadastro label {
+    display: block;
+    margin-bottom: var(--espaco-1);
+}
+
+.formulario-cadastro input[type="text"],
+.formulario-cadastro input[type="email"],
+.formulario-cadastro input[type="tel"],
+.formulario-cadastro input[type="number"],
+.formulario-cadastro input[type="date"],
+.formulario-cadastro select,
+.formulario-cadastro textarea {
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+/* Campos de texto ocupam a largura disponível */
+.formulario-cadastro input[type="text"],
+.formulario-cadastro input[type="email"],
+.formulario-cadastro input[type="tel"],
+.formulario-cadastro textarea {
+    width: 100%;
+}
+
+/* Tamanhos dos campos específicos */
+.formulario-cadastro input[type="number"] {
+    width: 10rem;
+}
+
+.formulario-cadastro input[type="date"] {
+    width: 18rem;
+}
+
+.formulario-cadastro select {
+    width: 100%;
+}
+
+/* Opções de entrega e aceite */
+.formulario-cadastro input[type="radio"],
+.formulario-cadastro input[type="checkbox"] {
+    width: auto;
+}
+
+/* Evita que o formulário ultrapasse a tela */
+.formulario-cadastro fieldset {
+    min-width: 0;
+}
+
+.formulario-cadastro textarea {
+    min-height: 8rem;
+    resize: vertical;
+}
