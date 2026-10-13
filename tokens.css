@@ -1,46 +1,65 @@
-:root {
-    /* Cores */
-    --cor-fundo: #F3F0E8;
-    --cor-superficie: #FFFFFF;
-    --cor-texto: #1F2933; /* 12,96:1 sobre --cor-fundo — AAA; 14,76:1 sobre --cor-superficie — AAA */
-    --cor-texto-suave: #52606D; /* 5,67:1 sobre --cor-fundo — AA; 6,46:1 sobre --cor-superficie — AA */
-    --cor-marca: #7A3E00;
-    --cor-sobre-marca: #FFFFFF; /* 8,34:1 sobre --cor-marca — AAA */
-    --cor-borda: #B8B8B8;
 
-    /* Fontes */
-    --fonte-texto: system-ui, sans-serif;
-    --fonte-titulo: "IBM Plex Serif", serif;
-
-    /* Escala tipográfica */
-    /* Multiplicador da escala: 1.25 */
-    --tamanho-texto: 1rem;
-    --tamanho-h3: 1.25rem;
-    --tamanho-h2: 1.563rem;
-    --tamanho-h1: 1.953rem;
-
-    /* Espaçamentos */
-    --espaco-1: 0.5rem;
-    --espaco-2: 1rem;
-    --espaco-3: 1.5rem;
-    --espaco-4: 2rem;
-
-    /* Bordas */
-    --raio: 0.5rem;
-
-    /* Sombra */
-    --sombra: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Tema escuro */
-@media (prefers-color-scheme: dark) {
+@layer base {
     :root {
-        --cor-fundo: #121212;
-        --cor-superficie: #1E1E1E;
-        --cor-texto: #F5F5F5;
-        --cor-texto-suave: #C2C2C2;
-        --cor-marca: #F0B66B;
-        --cor-sobre-marca: #1B1B1B;
-        --cor-borda: #777777;
+        /* Cores do tema claro */
+        --cor-fundo: #F3F0E8;
+        --cor-superficie: #FFFFFF;
+        --cor-texto: #1F2933; /* 12,96:1 sobre o fundo; 14,76:1 sobre a superfície */
+        --cor-texto-suave: #52606D; /* 5,67:1 sobre o fundo; 6,46:1 sobre a superfície */
+        --cor-marca: #7A3E00;
+        --cor-sobre-marca: #FFFFFF; /* 8,34:1 sobre a marca */
+        --cor-borda: #B8B8B8;
+
+        /* Foco: branco, com contraste superior a 3:1 nos fundos claros e escuros */
+        --cor-foco: #FFFFFF;
+
+        /* Marca forte para hover: escurece a marca e mantém contraste com texto branco */
+        --cor-marca-forte: #5C2E00;
+
+        /* Fontes */
+        --fonte-texto: system-ui, sans-serif;
+        --fonte-titulo: "IBM Plex Serif", serif;
+
+        /* Escala tipográfica */
+        /* Multiplicador da escala: 1.25 */
+        --tamanho-texto: 1rem;
+        --tamanho-h3: 1.25rem;
+        --tamanho-h2: 1.563rem;
+        --tamanho-h1: 1.953rem;
+
+        /* Espaçamentos */
+        --espaco-1: 0.5rem;
+        --espaco-2: 1rem;
+        --espaco-3: 1.5rem;
+        --espaco-4: 2rem;
+
+        /* Bordas */
+        --raio: 0.5rem;
+
+        /* Sombra */
+        --sombra: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+        color-scheme: light;
+    }
+
+    /* Tema escuro: apenas os tokens mudam */
+    @media (prefers-color-scheme: dark) {
+        :root {
+            --cor-fundo: #121212;
+            --cor-superficie: #1E1E1E;
+            --cor-texto: #F5F5F5;
+            --cor-texto-suave: #C2C2C2;
+            --cor-marca: #F0B66B;
+            --cor-sobre-marca: #1B1B1B;
+            --cor-borda: #777777;
+
+            /* Foco sobre fundos escuros */
+            --cor-foco: #F0B66B;
+
+            /* Marca forte no tema escuro */
+            --cor-marca-forte: #D99A45;
+
+            color-scheme: dark;
+        }
     }
 }
