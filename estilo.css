@@ -263,3 +263,249 @@ blockquote {
     min-height: 8rem;
     resize: vertical;
 }
+
+/* ========================================
+   ATIVIDADE 04 — CATÁLOGO RESPONSIVO
+   ======================================== */
+
+/* Navegação principal */
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--espaco-2);
+    padding: var(--espaco-2) var(--espaco-3);
+    background-color: var(--cor-marca);
+}
+
+.menu a {
+    display: inline-block;
+    padding: 0.5rem 0.75rem;
+    border-radius: var(--raio);
+    text-decoration: none;
+}
+
+.menu a:hover,
+.menu a[aria-current="page"] {
+    text-decoration: underline;
+    text-underline-offset: 0.25em;
+}
+
+/* Link para pular direto ao conteúdo */
+.pular {
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+    z-index: 1000;
+    padding: 0.75rem 1rem;
+    background-color: var(--cor-superficie);
+    color: var(--cor-texto);
+    border: 2px solid var(--cor-marca);
+    border-radius: var(--raio);
+    transform: translateY(-200%);
+}
+
+.pular:focus {
+    transform: translateY(0);
+}
+
+/* Foco visível para teclado */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid var(--cor-marca);
+    outline-offset: 3px;
+}
+
+/* Barra de categorias */
+.barra-categorias {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--espaco-1);
+    list-style: none;
+    padding: 0;
+    margin: var(--espaco-2) 0;
+}
+
+.barra-categorias button {
+    max-width: 100%;
+    padding: 0.65rem 0.9rem;
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio);
+    background-color: var(--cor-superficie);
+    color: var(--cor-texto);
+    font: inherit;
+    cursor: pointer;
+}
+
+.barra-categorias button:hover,
+.barra-categorias button:focus-visible {
+    border-color: var(--cor-marca);
+}
+
+/* Área principal e grade de produtos */
+.pagina-catalogo main {
+    min-width: 0;
+}
+
+.lista-produtos {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--espaco-3);
+    align-items: stretch;
+}
+
+.lista-produtos > li {
+    min-width: 0;
+}
+
+.cartao-produto {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+    margin: 0;
+    overflow-wrap: anywhere;
+}
+
+.cartao-produto article {
+    min-width: 0;
+}
+
+.cartao-produto img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: var(--raio);
+}
+
+.cartao-produto h3 {
+    overflow-wrap: anywhere;
+}
+
+.cartao-produto button {
+    max-width: 100%;
+    padding: 0.7rem 1rem;
+    border: 0;
+    border-radius: var(--raio);
+    background-color: var(--cor-marca);
+    color: var(--cor-sobre-marca);
+    font: inherit;
+    cursor: pointer;
+}
+
+/* Cartão em destaque: muda conforme o espaço do próprio cartão */
+.cartao-produto {
+    container-type: inline-size;
+    container-name: produto;
+}
+
+@container produto (min-width: 30rem) {
+    .cartao-produto article {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        gap: var(--espaco-2);
+        align-items: center;
+    }
+
+    .cartao-produto img {
+        grid-column: 1;
+        grid-row: 1 / span 5;
+    }
+
+    .cartao-produto h3,
+    .cartao-produto .produtor,
+    .cartao-produto .preco,
+    .cartao-produto button {
+        grid-column: 2;
+    }
+}
+
+/* Mais pedidos */
+.lateral {
+    padding: var(--espaco-3);
+    min-width: 0;
+}
+
+.lateral .lista-produtos {
+    grid-template-columns: minmax(0, 1fr);
+}
+
+/* Layout para telas médias */
+@media (min-width: 40rem) {
+    .pagina-catalogo main > .lista-produtos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .pagina-catalogo main > .lista-produtos > .destaque {
+        grid-column: 1 / -1;
+    }
+
+    .lateral .lista-produtos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* Layout para telas grandes */
+@media (min-width: 64rem) {
+    .pagina-catalogo main > .lista-produtos {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .pagina-catalogo main > .lista-produtos > .destaque {
+        grid-column: 1 / -1;
+    }
+
+    .pagina-catalogo main {
+        padding-inline: var(--espaco-4);
+    }
+}
+
+/* Evita que elementos largos provoquem rolagem horizontal */
+body,
+main,
+nav,
+aside,
+header,
+footer,
+.lista-produtos,
+.cartao-produto {
+    min-width: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* Tema escuro do sistema */
+@media (prefers-color-scheme: dark) {
+    body {
+        color-scheme: dark;
+    }
+
+    .cartao-produto,
+    .barra-categorias button,
+    .busca input,
+    .formulario-cadastro input,
+    .formulario-cadastro select,
+    .formulario-cadastro textarea {
+        background-color: var(--cor-superficie);
+        color: var(--cor-texto);
+    }
+}
+
+/* Respeita a preferência por menos movimento */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
