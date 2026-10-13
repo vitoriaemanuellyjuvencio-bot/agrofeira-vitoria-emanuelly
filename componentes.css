@@ -157,7 +157,7 @@
         }
     }
 
-    /* Contorno do cartão inteiro quando Adicionar recebe foco */
+    /* :has() — destaca o cartão quando um botão recebe foco */
     .cartao-produto:has(button:focus-visible) {
         outline: 3px solid var(--cor-foco);
         outline-offset: 4px;

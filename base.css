@@ -56,20 +56,74 @@
         min-width: 0;
     }
 
+    /* Layout do catálogo em telas estreitas */
+    .pagina-catalogo {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-areas:
+            "cabecalho"
+            "menu"
+            "conteudo"
+            "lateral"
+            "rodape";
+        gap: var(--espaco-2);
+    }
+
+    .pagina-catalogo > .cabecalho-site {
+        grid-area: cabecalho;
+    }
+
+    .pagina-catalogo > nav[aria-label="Principal"] {
+        grid-area: menu;
+        min-width: 0;
+    }
+
+    .pagina-catalogo > #conteudo {
+        grid-area: conteudo;
+    }
+
+    .pagina-catalogo > .lateral {
+        grid-area: lateral;
+    }
+
+    .pagina-catalogo > .rodape-site {
+        grid-area: rodape;
+    }
+
+    /* Três colunas quando há espaço para o conteúdo */
+    @media (min-width: 64rem) {
+        .pagina-catalogo {
+            grid-template-columns: 12rem minmax(0, 1fr) 15rem;
+            grid-template-areas:
+                "cabecalho cabecalho cabecalho"
+                "menu conteudo lateral"
+                "rodape rodape rodape";
+            align-items: start;
+        }
+    }
+
+    /* Foco visível para navegação por teclado */
     :focus-visible {
         outline: 3px solid var(--cor-foco);
         outline-offset: 3px;
     }
 
+    /* Foco sobre elementos que ficam na área da marca */
+    .cabecalho-site :focus-visible,
+    .menu :focus-visible,
+    .pular:focus-visible {
+        outline-color: var(--cor-foco-sobre-marca);
+    }
+
+    /* Respeita usuários que preferem movimento reduzido */
     @media (prefers-reduced-motion: reduce) {
         *,
         *::before,
         *::after {
-            scroll-behavior: auto !important;
-            animation-duration: 0.01ms !important;
-            animation-iteration-count: 1 !important;
-            transition-duration: 0.01ms !important;
+            scroll-behavior: auto;
+            animation-duration: 0.01ms;
+            animation-iteration-count: 1;
+            transition-duration: 0.01ms;
         }
     }
 }
-
