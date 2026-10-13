@@ -31,3 +31,16 @@
     /* Sombra */
     --sombra: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
+
+/* Tema escuro */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --cor-fundo: #121212;
+        --cor-superficie: #1E1E1E;
+        --cor-texto: #F5F5F5;
+        --cor-texto-suave: #C2C2C2;
+        --cor-marca: #F0B66B;
+        --cor-sobre-marca: #1B1B1B;
+        --cor-borda: #777777;
+    }
+}
