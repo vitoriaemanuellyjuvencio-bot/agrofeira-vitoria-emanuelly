@@ -509,3 +509,19 @@ img {
         transition-duration: 0.01ms !important;
     }
 }
+
+/* Foco visível ao navegar com o teclado */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid var(--cor-marca);
+    outline-offset: 3px;
+}
+
+/* Contorno do cartão inteiro quando Adicionar recebe foco */
+.cartao-produto:has(button:focus-visible) {
+    outline: 3px solid var(--cor-marca);
+    outline-offset: 4px;
+}
