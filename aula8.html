@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JavaScript na AgroFeira</title>
+
+    <link rel="stylesheet" href="camadas.css">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="tokens.css">
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="componentes.css">
+    <link rel="stylesheet" href="utilitarios.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+<header class="cabecalho-site">
+    <h1>AgroFeira</h1>
+
+    <nav aria-label="Principal">
+        <ul class="menu">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="catalogo.html">Catálogo</a></li>
+            <li><a href="safra.html">Safra</a></li>
+            <li><a href="cadastro-produtor.html">Cadastro de produtor</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main id="conteudo">
+
+    <h2>JavaScript na AgroFeira</h2>
+
+    <p>Na AgroFeira, utilizei JavaScript de três formas: externa, interna e em linha.</p>
+
+    <script src="js/aula8.js"></script>
+
+    <script>
+        console.log('Forma 2: interna, entre as tags script');
+    </script>
+
+    <button type="button" onclick="alert('Forma 3: em linha, dentro da tag')">
+        Forma 3
+    </button>
+
+</main>
+
+<footer class="rodape-site">
+    <p>AgroFeira de Paragominas - valorizando os produtores locais.</p>
+</footer>
+
+</body>
+</html>
