@@ -17,9 +17,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        pre {
+            white-space: pre-wrap;
+            overflow-wrap: anywhere;
+            word-break: break-word;
+        }
+    </style>
 </head>
 
 <body>
+
     <a class="pular" href="#conteudo">Pular para o conteúdo</a>
 
     <header class="cabecalho-site">
@@ -32,6 +41,7 @@
                 <li><a href="safra.html">Safra</a></li>
                 <li><a href="cadastro-produtor.html">Cadastro de produtor</a></li>
                 <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="aula8.html" aria-current="page">Aula 8</a></li>
             </ul>
         </nav>
     </header>
@@ -44,14 +54,21 @@
             <h2>Identificação</h2>
 
             <p><strong>Nome:</strong> Vitoria Emanuelly Juvencio Costa</p>
+
             <p><strong>Matrícula:</strong> 2024009005</p>
+
             <p>
                 <strong>Repositório:</strong>
-                https://github.com/vitoriaemanuellyjuvencio-bot/agrofeira-vitoria-emanuelly
+                <a href="https://github.com/vitoriaemanuellyjuvencio-bot/agrofeira-vitoria-emanuelly">
+                    https://github.com/vitoriaemanuellyjuvencio-bot/agrofeira-vitoria-emanuelly
+                </a>
             </p>
+
             <p>
                 <strong>Site publicado:</strong>
-                https://vitoriaemanuellyjuvencio-bot.github.io/agrofeira-vitoria-emanuelly/
+                <a href="https://vitoriaemanuellyjuvencio-bot.github.io/agrofeira-vitoria-emanuelly/">
+                    https://vitoriaemanuellyjuvencio-bot.github.io/agrofeira-vitoria-emanuelly/
+                </a>
             </p>
         </section>
 
@@ -74,11 +91,13 @@
             <h2>Meus projetos</h2>
 
             <h3>Projeto 1 — Jogo da velha em React</h3>
+
             <p>
                 Projeto desenvolvido durante o tutorial do React, com componentes,
                 propriedades e controle de estado para atualizar os quadrados
                 quando são clicados.
             </p>
+
             <p>
                 <a href="https://codesandbox.io/p/sandbox/react-dev-forked-3hz7v4"
                    target="_blank" rel="noopener noreferrer">
@@ -87,11 +106,13 @@
             </p>
 
             <h3>Projeto 2 — Catálogo AgroFeira em React</h3>
+
             <p>
                 Projeto que apresenta três produtos da AgroFeira. Cada produto
                 possui um botão que muda o texto de "Adicionar" para
                 "No carrinho" quando clicado.
             </p>
+
             <p>
                 <a href="https://codesandbox.io/p/devbox/react-dev-forked-dxs44n?workspaceId=ws_SJyEweoPq26CqpVgwN45oC"
                    target="_blank" rel="noopener noreferrer">
@@ -104,10 +125,12 @@
             <h2>Mensagens que encontrei</h2>
 
             <h3>Passo 6 — Erro no JavaScript</h3>
+
             <pre>Uncaught ReferenceError: naoExiste is not defined
     at aula8.js:3:1</pre>
 
             <h3>Passo 10 — Erro no React</h3>
+
             <pre>TypeError
 Cannot assign to read only property 'message' of object 'SyntaxError: /src/App.js: Adjacent JSX elements must be wrapped in an enclosing tag. Did you want a JSX fragment &lt;&gt;&lt;/&gt;? (4:4)
 
@@ -119,6 +142,7 @@ Cannot assign to read only property 'message' of object 'SyntaxError: /src/App.j
   6 | }'</pre>
 
             <h3>Passo 14 — Erro na declaração de variável</h3>
+
             <pre>TypeError
 Cannot assign to read only property 'message' of object 'SyntaxError: /src/App.js: Identifier 'value' has already been declared. (3:18)
 
@@ -135,6 +159,7 @@ Cannot assign to read only property 'message' of object 'SyntaxError: /src/App.j
             <h2>O que eu aprendi</h2>
 
             <h3>1. As três formas de usar JavaScript</h3>
+
             <p>
                 Aprendi que o JavaScript pode ser utilizado de forma externa,
                 interna ou diretamente em uma linha do HTML. Para um programa
@@ -146,10 +171,11 @@ Cannot assign to read only property 'message' of object 'SyntaxError: /src/App.j
             </p>
 
             <h3>2. Repetição e criação de componentes</h3>
+
             <p>
                 No jogo da velha, o componente Square foi utilizado para criar
                 os nove quadrados sem precisar repetir todo o código de cada
-                botão. No meu catálogo.html, o que se repete são os cartões
+                botão. No meu catalogo.html, o que se repete são os cartões
                 dos produtos. Eu criaria um componente chamado Produto,
                 recebendo propriedades como nome, preço e descrição, para
                 apresentar cada produto de maneira organizada e reutilizar
@@ -157,6 +183,7 @@ Cannot assign to read only property 'message' of object 'SyntaxError: /src/App.j
             </p>
 
             <h3>3. Propriedades e estado</h3>
+
             <p>
                 No componente Produto, a propriedade nome recebe o nome do
                 produto que será exibido. Já o estado rotulo controla o texto
@@ -168,6 +195,7 @@ Cannot assign to read only property 'message' of object 'SyntaxError: /src/App.j
             </p>
 
             <h3>4. Decisão sobre a estilização</h3>
+
             <p>
                 Não realizei a Atividade 6, então não tinha uma decisão anterior
                 registrada sobre a forma de estilização. Para esta atividade,
@@ -182,7 +210,10 @@ Cannot assign to read only property 'message' of object 'SyntaxError: /src/App.j
     </main>
 
     <footer class="rodape-site">
-        <p>AgroFeira de Paragominas - valorizando os produtores locais.</p>
+        <p>
+            AgroFeira de Paragominas - valorizando os produtores locais.
+        </p>
     </footer>
+
 </body>
 </html>
